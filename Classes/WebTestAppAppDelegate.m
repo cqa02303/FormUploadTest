@@ -34,8 +34,7 @@
 - (IBAction)loadHome{
 	NSLog(@"loadHome:%@", thisWebView);
 	// 実験するうぷろだのURL
-	NSURL *url = [NSURL URLWithString:@"http://pizza.la.coocan.jp/updir/updir.php?mode=up"];
-//	NSURL *url = [NSURL URLWithString:@"http://ero.movie.coocan.jp/?plugin=attach&pcmd=upload&page=FrontPage"];
+	NSURL *url = [NSURL URLWithString:@"http://www.google.com/"];
 //	NSLog(@"url:%@", url);
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //	NSLog(@"request:%@", request);
