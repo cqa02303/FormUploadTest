@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 2534}}";
-			sepNavSelRange = "{3128, 0}";
-			sepNavVisRange = "{928, 416}";
+			sepNavIntBoundsRect = "{{0, 0}, {922, 2490}}";
+			sepNavSelRange = "{4655, 0}";
+			sepNavVisRange = "{1167, 1024}";
 			sepNavWindowFrame = "{{15, 340}, {441, 433}}";
 		};
 	};
@@ -24,7 +24,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 82E9F35D108EF2F1001BB1B6 /* WebTestApp */;
-		activeSDKPreference = iphonesimulator3.1.2;
+		activeSDKPreference = iphoneos3.1.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* WebTestApp */;
 		breakpoints = (
 			82A783CE108F130400FA9846 /* objc_exception_throw */,
@@ -56,19 +56,39 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 277811874;
-			PBXWorkspaceStateSaveDate = 277811874;
+			PBXPerProjectTemplateStateSaveDate = 277894231;
+			PBXWorkspaceStateSaveDate = 277894231;
 		};
 		perUserProjectItems = {
-			82A784C0109003A600FA9846 /* XCBuildMessageTextBookmark */ = 82A784C0109003A600FA9846 /* XCBuildMessageTextBookmark */;
+			8210FCFA1090599900CFBFE6 /* PBXTextBookmark */ = 8210FCFA1090599900CFBFE6 /* PBXTextBookmark */;
+			8210FCFB1090599900CFBFE6 /* PBXTextBookmark */ = 8210FCFB1090599900CFBFE6 /* PBXTextBookmark */;
 			82A785531090161600FA9846 /* PBXTextBookmark */ = 82A785531090161600FA9846 /* PBXTextBookmark */;
-			82A785541090161600FA9846 /* PBXTextBookmark */ = 82A785541090161600FA9846 /* PBXTextBookmark */;
 			82A7855B109018D100FA9846 /* PBXTextBookmark */ = 82A7855B109018D100FA9846 /* PBXTextBookmark */;
 			82A7855C109018D100FA9846 /* PBXTextBookmark */ = 82A7855C109018D100FA9846 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 82E9F373108EF2FE001BB1B6 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	8210FCFA1090599900CFBFE6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
+		name = "WebTestAppAppDelegate.m: 158";
+		rLen = 0;
+		rLoc = 5402;
+		rType = 0;
+		vrLen = 1447;
+		vrLoc = 4729;
+	};
+	8210FCFB1090599900CFBFE6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
+		name = "WebTestAppAppDelegate.m: 134";
+		rLen = 0;
+		rLoc = 4655;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 1167;
 	};
 	82A783CE108F130400FA9846 /* objc_exception_throw */ = {
 		isa = PBXSymbolicBreakpoint;
@@ -81,19 +101,10 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libobjc.A.dylib;
-		modificationTime = 277878296.342258;
+		modificationTime = 277895257.653188;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 		symbolName = objc_exception_throw;
-	};
-	82A784C0109003A600FA9846 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Request for member 'view' in something not a structure or union";
-		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 122;
-		rType = 1;
 	};
 	82A785531090161600FA9846 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -105,22 +116,12 @@
 		vrLen = 725;
 		vrLoc = 0;
 	};
-	82A785541090161600FA9846 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
-		name = "WebTestAppAppDelegate.m: 152";
-		rLen = 0;
-		rLoc = 5473;
-		rType = 0;
-		vrLen = 1273;
-		vrLoc = 4358;
-	};
 	82A7855B109018D100FA9846 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
 		name = "WebTestAppAppDelegate.m: 123";
 		rLen = 10;
-		rLoc = 4630;
+		rLoc = 4672;
 		rType = 0;
 		vrLen = 1606;
 		vrLoc = 3798;
@@ -130,7 +131,7 @@
 		fRef = 1D3623250D0F684500981E51 /* WebTestAppAppDelegate.m */;
 		name = "WebTestAppAppDelegate.m: 123";
 		rLen = 0;
-		rLoc = 4613;
+		rLoc = 4655;
 		rType = 0;
 		vrLen = 1161;
 		vrLoc = 1570;
@@ -157,7 +158,7 @@
 		);
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
-		libgmallocEnabled = 1;
+		libgmallocEnabled = 0;
 		name = WebTestApp;
 		savedGlobals = {
 		};

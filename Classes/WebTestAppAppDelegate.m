@@ -53,6 +53,15 @@
 		}
 		NSLog(@"boundary:%@", boundary);
 		// HTTPBody分解、image埋め込み
+		// > Content-Disposition: form-data; name="userfile[0]"
+		// >
+		// > 0xABADBABE
+		// ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+		// > Content-disposition: attachment; filename="file.jpg"
+		// > Content-type: image/jpeg
+		// > Content-Transfer-Encoding: binary
+		// >
+		// > (DATA)
 		NSString *body = [[[NSString alloc] initWithData:self.storedRequest.HTTPBody encoding:NSASCIIStringEncoding] autorelease];
 		NSArray *array = [body componentsSeparatedByString:boundary];
 		NSRange range;
@@ -97,30 +106,22 @@
 	// POSTの時に処理をする
 	switch (navigationType) {
 		case UIWebViewNavigationTypeFormSubmitted:{	// FORMからの呼び出し
-			NSString *contentTypeStr = [request valueForHTTPHeaderField:@"Content-Type"];
-			NSLog(@"\tmethod-->%@", request.HTTPMethod);
-			NSLog(@"\theader-->%@", request.allHTTPHeaderFields);
-			NSLog(@"\theader(content type)-->%@", contentTypeStr);
-			// bodyを分解する
-			// > Content-Disposition: form-data; name="userfile[0]"
-			// >
-			// > 0xABADBABE
-			// ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-			// > Content-disposition: attachment; filename="file.jpg"
-			// > Content-type: image/jpeg
-			// > Content-Transfer-Encoding: binary
-			// >
-			// > (DATA)
-			NSLog(@"\tbody-->%@", [[[NSString alloc] initWithData:request.HTTPBody encoding:NSASCIIStringEncoding]autorelease]);
-			if(!strcmp("NSMutableURLRequest", object_getClassName(request))){
-				// 印をつけて保存する
-				self.storedRequest = (NSMutableURLRequest*)request;
-				[self.storedRequest setValue:@"yes" forHTTPHeaderField:@"X-APP-ATTACH"];
-				UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-				picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-				picker.delegate = self;
-				[self.window addSubview:picker.view];
-				return NO;
+			if (![self.tagName isEqualToString:@"0"]) {
+				NSString *contentTypeStr = [request valueForHTTPHeaderField:@"Content-Type"];
+				NSLog(@"\tmethod-->%@", request.HTTPMethod);
+				NSLog(@"\theader-->%@", request.allHTTPHeaderFields);
+				NSLog(@"\theader(content type)-->%@", contentTypeStr);
+				NSLog(@"\tbody-->%@", [[[NSString alloc] initWithData:request.HTTPBody encoding:NSASCIIStringEncoding]autorelease]);
+				if(!strcmp("NSMutableURLRequest", object_getClassName(request))){
+					// 印をつけて保存する
+					self.storedRequest = (NSMutableURLRequest*)request;
+					[self.storedRequest setValue:@"yes" forHTTPHeaderField:@"X-APP-ATTACH"];
+					UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+					picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+					picker.delegate = self;
+					[self.window addSubview:picker.view];
+					return NO;
+				}
 			}
 		}
 		default:
