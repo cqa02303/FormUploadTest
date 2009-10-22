@@ -12,14 +12,14 @@
     UIWindow *window;
 	IBOutlet UIWebView *thisWebView;
 	NSMutableURLRequest *storedRequest;
-	NSString *tagName;
-	NSData *imageData;
+	NSArray *tagNames;
+	NSMutableArray *imageDatas;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) NSMutableURLRequest *storedRequest;
-@property (nonatomic, retain) NSString *tagName;
-@property (nonatomic, retain) NSData *imageData;
+@property (nonatomic, retain) NSArray *tagNames;
+@property (nonatomic, retain) NSMutableArray *imageDatas;
 
 - (IBAction)loadHome;
 - (IBAction)loadPage;
